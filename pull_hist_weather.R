@@ -23,10 +23,10 @@ day = strptime(sub(pattern = "<br />","",as.character(dateUTC)),format="%Y-%m-%d
 
 #met = Reduce(function(...) merge(...,all=TRUE),weather_data)
 
-##jpeg(file="~/SURGE/web/WindSpeed.jpg")
+jpeg(file="~/SURGE/web/HistoricWindSpeed.jpg")
 plot(day,hist_wind, ylab="Wind Speed (mph)", xlab="Date", main="Historical Wind Speed in 30 min Intervals in Cardiff,UK",type='l')
-##dev.off()
+dev.off()
 
-##jpeg(file="~/SURGE/web/SeaLevelPressure.jpg")
+jpeg(file="~/SURGE/web/HistoricSeaLevelPressure.jpg")
 plot(day,hist_pres, ylab="Sea Level Pressure (in)", xlab="Date", main="Historical Sea Level Pressure in 30 min Intervals in Cardiff,UK",type='l')
-##dev.off()
+dev.off()
