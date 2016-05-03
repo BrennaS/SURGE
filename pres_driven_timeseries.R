@@ -85,7 +85,7 @@ surge_data[i] ~ dnorm(surge_final[i],tau_obs)
 #### Process Model
 for(i in 2:n){
 ##surge[i]<-(wind.data[i]/beta ) * (9.8/(tide.data[i]))*(pressure.data[i]/beta)
-  surge[i]<- tide_data[i] + beta1*(surge_final[i-1]-tide[i-1]) + beta2*pressure_data[i] + beta3*wind_data[i]
+  surge[i]<- tide_data[i] + beta1*(surge_final[i-1]-tide_data[i-1]) + beta2*pressure_data[i] + beta3*wind_data[i]
   surge_final[i]~dnorm(surge[i],tau_add)
 }
 
